@@ -1,0 +1,15 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.navLink {
+	padding: 5px;
+	color: white;
+}
+
+.navLink:hover {
+	color: white;
+	text-decoration: none;
+	border: 2px solid white;
+}
