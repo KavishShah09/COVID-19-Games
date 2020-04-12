@@ -7,7 +7,7 @@
 A 2D breakout game made using phaser
 
 <p align="center">
- <img width=600px src="./public/images/brickBreaker.png" alt="Brick Breaker">
+ <img width=600px src="./public/images/coronaBreaker.png" alt="Brick Breaker">
 </p>
 
 > ## CORONA SHOOTER!
@@ -15,7 +15,7 @@ A 2D breakout game made using phaser
 A duck shooter clone made using css animations
 
 <p align="center">
- <img width=600px src="./public/images/duckShooter.png" alt="Brick Breaker">
+ <img width=600px src="./public/images/coronaShooter.png" alt="Brick Breaker">
 </p>
 
 ## In collaboration with:
