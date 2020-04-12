@@ -64,7 +64,6 @@ function ballLeaveScreen() {
 }
 
 function ballHitBrick(ball, brick) {
-	console.log(brick.scale);
 	var killTween = game.add.tween(brick.scale);
 	killTween.to({ x: 0, y: 0 }, 200, Phaser.Easing.Linear.None);
 	killTween.onComplete.addOnce(function () {
@@ -132,7 +131,7 @@ function create() {
 	paddle.body.immovable = true;
 
 	// Text config
-	var textStyles = { font: '18px Arial', fill: '#0095DD' };
+	var textStyles = { font: '18px Serif', fill: '#a09e9f' };
 	scoreText = game.add.text(5, 5, 'Points: ' + score, textStyles);
 	livesText = game.add.text(game.world.width - 5, 5, 'Lives: ' + lives, textStyles);
 	lifeLostText = game.add.text(
