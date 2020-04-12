@@ -2,7 +2,7 @@
 
 ## Simple implementations of basic 2D games
 
-> ## Brick Breaker
+> ## BRICK BREAKER!
 
 A 2D breakout game made using phaser
 
