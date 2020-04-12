@@ -2,7 +2,7 @@
 
 ## Simple implementations of basic 2D games
 
-> ## Corona Breaker
+> ## CORONA BREAKER!
 
 A 2D breakout game made using phaser
 
@@ -10,7 +10,7 @@ A 2D breakout game made using phaser
  <img width=600px src="./public/images/brickBreaker.png" alt="Brick Breaker">
 </p>
 
-> ## Corona Shooter
+> ## CORONA SHOOTER!
 
 A duck shooter clone made using css animations
 
