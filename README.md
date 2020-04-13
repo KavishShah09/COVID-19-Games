@@ -15,7 +15,7 @@ A 2D breakout game made using phaser
 A duck shooter clone made using css animations
 
 <p align="center">
- <img width=600px src="./public/images/coronaShooter.png" alt="Brick Breaker">
+ <img width=600px src="./public/images/coronaShooter.png" alt="Duck Shooter">
 </p>
 
 ## BEAT BOX
@@ -23,7 +23,7 @@ A duck shooter clone made using css animations
 A beat box music maker with different sounds and animations made using paper.js and howler.js
 
 <p align="center">
- <img width=600px src="./public/images/beatBox.png" alt="Brick Breaker">
+ <img width=600px src="./public/images/beatBox.png" alt="Beat Box">
 </p>
 
 ## In collaboration with:
