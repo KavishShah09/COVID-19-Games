@@ -23,7 +23,7 @@ A duck shooter clone made using css animations
 A beat box music maker with different sounds and animations made using paper.js and howler.js
 
 <p align="center">
- <img width=600px src="./public/images/beatbox.png" alt="Brick Breaker">
+ <img width=600px src="./public/images/beatBox.png" alt="Brick Breaker">
 </p>
 
 ## In collaboration with:
