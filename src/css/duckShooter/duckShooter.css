@@ -160,8 +160,8 @@ input:checked + label {
 	text-align: center;
 	width: 100%;
 	z-index: 2;
-	background-color: #013220;
-	color: black;
+	background-color: #000000;
+	color: #c9f7e6;
 }
 
 .score:after {
@@ -169,7 +169,7 @@ input:checked + label {
 	display: inline-block;
 }
 .score:before {
-	content: 'Score : ';
+	content: 'SCORE : ';
 	display: inline-block;
 	margin-right: 10px;
 }

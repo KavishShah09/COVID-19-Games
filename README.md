@@ -18,12 +18,20 @@ A duck shooter clone made using css animations
  <img width=600px src="./public/images/coronaShooter.png" alt="Duck Shooter">
 </p>
 
-## BEAT BOX
+## BEAT BOX!
 
 A beat box music maker with different sounds and animations made using paper.js and howler.js
 
 <p align="center">
  <img width=600px src="./public/images/beatBox.png" alt="Beat Box">
+</p>
+
+## WHACK A CORONA!
+
+Whack the popping Corona to win! Made using vanilla javascript
+
+<p align="center">
+ <img width=600px src="./public/images/whackAMole.png" alt="Whac A Mole">
 </p>
 
 ## In collaboration with:
