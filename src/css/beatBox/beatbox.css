@@ -23,7 +23,7 @@ body {
   line-height: 130px;
   color: white;
   font-size: 50px;
-  
+  font-family: Oswald;
   font-weight: bolder;
 }
 
@@ -198,4 +198,14 @@ canvas{
 }
 .disable-dbl-tap-zoom {
   touch-action: manipulation;
+}
+#instruction {
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 50px;
+  width: 40%;
+  color: white;
+  font-size: 30px;
+  font-family: Oswald;
+  text-align: center;
 }
