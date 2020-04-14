@@ -1,0 +1,212 @@
+h1 {
+	color: white;
+	font-size: 85px;
+	font-family: Oswald;
+	letter-spacing: 6px;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+body {
+	background-color: black;
+	background-image: url('../../../public/images/beatBox/black.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.box {
+	border-radius: 35%;
+	float: left;
+	text-align: center;
+	width: 25%;
+	height: 25%;
+	margin: 3.33%;
+	line-height: 130px;
+	color: white;
+	font-size: 50px;
+	font-family: Oswald;
+	font-weight: bolder;
+}
+
+#container {
+	margin: 25px auto;
+	width: 500px;
+	height: 500px;
+	position: relative;
+}
+
+#tom:hover {
+	background-color: #661920;
+	cursor: pointer;
+}
+
+#tom:active {
+	background-color: #db1d2d;
+	color: white;
+}
+
+#tom {
+	background-color: #3e181b;
+	border: 3px solid #db1d2d;
+	color: #db1d2d;
+}
+
+#clap:hover {
+	background-color: #6e2819;
+	cursor: pointer;
+}
+
+#clap:active {
+	background-color: #f0421c;
+	color: white;
+}
+
+#clap {
+	background-color: #422018;
+	border: 3px solid #f0421c;
+	color: #f0421c;
+}
+
+#kick:hover {
+	background-color: #735b20;
+	cursor: pointer;
+}
+
+#kick:active {
+	background-color: #fec02d;
+	color: white;
+}
+
+#kick {
+	background-color: #45391b;
+	border: 3px solid #fec02d;
+	color: #fec02d;
+}
+
+#openhat:hover {
+	background-color: #1b613b;
+	cursor: pointer;
+}
+
+#openhat:active {
+	background-color: #20d071;
+	color: white;
+}
+
+#openhat {
+	background-color: #193c29;
+	border: 3px solid #20d071;
+	color: #20d071;
+}
+
+#boom:hover {
+	background-color: #184d65;
+	cursor: pointer;
+}
+
+#boom:active {
+	background-color: #1a9ddb;
+	color: white;
+}
+
+#boom {
+	background-color: #18323e;
+	border: 3px solid #1a9ddb;
+	color: #1a9ddb;
+}
+
+#ride:hover {
+	background-color: #4e2753;
+	cursor: pointer;
+}
+
+#ride:active {
+	background-color: #a13fad;
+	color: white;
+}
+
+#ride {
+	background-color: #331f35;
+	border: 3px solid #a13fad;
+	color: #a13fad;
+}
+
+#snare:hover {
+	background-color: #6f3a62;
+	cursor: pointer;
+}
+
+#snare:active {
+	background-color: #f26fd4;
+	color: white;
+}
+
+#snare {
+	background-color: #43293d;
+	border: 3px solid #f26fd4;
+	color: #f26fd4;
+}
+
+#hoop {
+	background-color: #2d3059;
+	border: 3px solid #404be6;
+	color: #404be6;
+}
+
+#hoop:hover {
+	background-color: #252a7d;
+	cursor: pointer;
+}
+
+#hoop:active {
+	background-color: #404be6;
+	color: white;
+}
+
+canvas {
+	background-color: white;
+	height: 50%;
+	width: 50%;
+	border-radius: 30%;
+	margin-right: 25%;
+	margin-left: 25%;
+}
+#loop {
+	background-color: #2e5c39;
+	border: 3px solid #00ff04;
+	color: #00ff04;
+}
+
+#loop:hover {
+	background-color: #278a28;
+	cursor: pointer;
+}
+
+#loop:active {
+	background-color: #00ff04;
+	color: white;
+}
+
+.noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+.disable-dbl-tap-zoom {
+	touch-action: manipulation;
+}
+#instruction {
+	margin-left: 30%;
+	margin-right: 30%;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	width: 40%;
+	color: white;
+	font-size: 25px;
+	font-family: Oswald;
+	text-align: center;
+}

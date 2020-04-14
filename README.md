@@ -15,7 +15,31 @@ A 2D breakout game made using phaser
 A duck shooter clone made using css animations
 
 <p align="center">
- <img width=600px src="./public/images/coronaShooter.png" alt="Brick Breaker">
+ <img width=600px src="./public/images/coronaShooter.png" alt="Duck Shooter">
+</p>
+
+## BEAT BOX!
+
+A beat box music maker with different sounds and animations made using paper.js and howler.js
+
+<p align="center">
+ <img width=600px src="./public/images/beatBox.png" alt="Beat Box">
+</p>
+
+## WHACK A VIRUS!
+
+Whack the popping Corona to win! Made using Vanilla JavaScript
+
+<p align="center">
+ <img width=600px src="./public/images/whackAVirus.png" alt="Whack A Mole">
+</p>
+
+## FLAPPY CORONA!
+
+Flappy bird clone made using Vanilla JavaScript
+
+<p align="center">
+ <img width=600px src="./public/images/flappyCorona.png" alt="Flappy Bird">
 </p>
 
 ## In collaboration with:

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>Beat Box</title>
+        
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="./css/beatBox/beatbox.css">
+        
+		<script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+        <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/howler/1.1.28/howler.js"></script>
+		<script src="https://kit.fontawesome.com/b0213433d6.js" crossorigin="anonymous"></script>
+		<script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.2/paper-full.min.js"></script>
+		
+        <script defer="" src="js/beatBox/beatbox.js"></script>
+
+        <script type="text/javascript">
+			window.addEventListener("load", e => {
+				paper.install(window);
+				paper.setup("myCanvas");
+				
+				var circles = [];
+    
+				paper.view.onKeyDown = function(event){
+					if(keyData[event.key])
+					{
+						var maxPoint = new Point(view.size.width, view.size.height);
+						var randomPoint = Point.random();
+						var point = maxPoint.multiply(randomPoint);
+						var newCircle = new Path.Circle(point, 500)
+						newCircle.fillColor = keyData[event.key].color;
+						keyData[event.key].sound.play();
+						circles.push(newCircle);
+					}
+				}
+				
+				paper.view.onFrame = function(event){
+					for(var i = 0; i < circles.length; i++){
+						circles[i].fillColor.hue += 1;
+						circles[i].scale(.9);
+						if(circles[i].area < 1)
+						{
+							circles[i].remove(); 
+							circles.splice(i, 1); 
+						}
+					}
+				}
+			});
+        </script>
+  
+    </head>
+    <body>
+        <h1> <i class="fas fa-drum"></i> BEAT BOX <i class="fas fa-drum"></i> </h1>
+
+        <audio id="tAudio">
+			<source src="../public/audio/beatBox/tom.wav"></source>
+        </audio>
+
+        <audio id="cAudio">
+			<source src="../public/audio/beatBox/clap.wav"></source>
+        </audio>
+
+        <audio id="kAudio">
+			<source src="../public/audio/beatBox/kick.wav"></source>
+        </audio>
+
+        <audio id="oAudio">
+			<source src="../public/audio/beatBox/openhat.wav"></source>
+        </audio>
+
+        <audio id="bAudio">
+			<source src="../public/audio/beatBox/boom.wav"></source>
+        </audio>
+
+        <audio id="rAudio">
+			<source src="../public/audio/beatBox/ride.wav"></source>
+        </audio>
+
+        <audio id="sAudio">
+			<source src="../public/audio/beatBox/snare.wav"></source>
+        </audio>
+
+        <audio id="hAudio">
+			<source src="../public/audio/beatBox/wipe.mp3"></source>
+        </audio>
+
+        <audio id="lAudio">
+			<source src="../public/audio/beatBox/splits.mp3"></source>
+        </audio>
+
+        
+        <div id="instruction" class="noselect">Use keyboard number keys (1 to 9) on PC for better experience or use the buttons below</div>
+        <canvas id="myCanvas" resize></canvas>
+
+        <div id="container" class="disable-dbl-tap-zoom">
+            <div id="tom" class="noselect box">1</div>
+            <div id="clap" class="noselect box">2</div>
+            <div id="kick" class="noselect box">3</div>
+            <div id="openhat" class="noselect box">4</div>
+            <div id="boom" class="noselect box">5</div>
+            <div id="ride" class="noselect box">6</div>
+            <div id="snare" class="noselect box">7</div>
+            <div id="hoop" class="noselect box">8</div>
+            <div id="loop" class="noselect box">9</div>
+        </div>
+    </body>
+</html>
