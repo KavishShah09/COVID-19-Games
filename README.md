@@ -26,12 +26,12 @@ A beat box music maker with different sounds and animations made using paper.js 
  <img width=600px src="./public/images/beatBox.png" alt="Beat Box">
 </p>
 
-## WHACK A CORONA!
+## WHACK A VIRUS!
 
 Whack the popping Corona to win! Made using vanilla javascript
 
 <p align="center">
- <img width=600px src="./public/images/whackAMole.png" alt="Whac A Mole">
+ <img width=600px src="./public/images/whackAVirus.png" alt="Whack A Mole">
 </p>
 
 ## In collaboration with:
