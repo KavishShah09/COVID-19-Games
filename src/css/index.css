@@ -1,15 +1,81 @@
-* {
-	padding: 0;
-	margin: 0;
+body{
+	font-family: sans-serif;
+	background: #34495e;
+	margin:0px;
+	padding: 0px;
+	background-image: url();
 }
-
-.navLink {
-	padding: 5px;
-	color: white;
+.heading{
+	background-color: #333;
+	margin-top: 0px;
+	padding-top:7px;
+	padding-bottom: 15px;
+	padding-left: 4px;
 }
-
-.navLink:hover {
-	color: white;
+.header{
+	margin-top: 7px;
+}
+.navbar-brand{
+	border:rgb(235, 11, 11) 7px solid;
+	padding:0 22px;
+	border-bottom-right-radius: 50px;
+	border-top-left-radius: 50px;
+	margin-top: 40000px;
+	font-size: 200%;
+	font-style: italic;
+	background-color: #333;
 	text-decoration: none;
-	border: 2px solid white;
+	color: rgb(255, 255, 255);
 }
+.container{
+	width: 80%;
+	padding: 40px;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	background: #191919;
+	text-align: center;
+	border-right: #333 solid 6px;
+	border-bottom: #333 solid 6px;
+}
+.container h1{
+	color:#f4f4f4;
+	font-weight: 500px;
+}
+.container ul{
+	
+}
+.container li{
+	list-style: none;
+	float:left;
+	width:50%;
+	box-sizing:border-box;
+}
+.game{
+	text-decoration: none;
+	border:0;
+	background: none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #1cb8e7;
+	padding: 14px 10px;
+	width: 60%;
+	outline: none;
+	color: rgba(255, 255, 255, 0.322);
+	border-radius: 24px;
+	transition: 0.25s;
+	padding: 10% 0;
+	font-size:140%;
+}
+.game:hover{
+	width: 70%;
+	border-color: #2ecc71;
+	color: white;
+}
+.game:active{
+	width:55%;
+}
+
+
