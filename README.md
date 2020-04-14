@@ -28,10 +28,18 @@ A beat box music maker with different sounds and animations made using paper.js 
 
 ## WHACK A VIRUS!
 
-Whack the popping Corona to win! Made using vanilla javascript
+Whack the popping Corona to win! Made using Vanilla JavaScript
 
 <p align="center">
  <img width=600px src="./public/images/whackAVirus.png" alt="Whack A Mole">
+</p>
+
+## FLAPPY CORONA!
+
+Flappy bird clone made using Vanilla JavaScript
+
+<p align="center">
+ <img width=600px src="./public/images/flappyCorona.png" alt="Flappy Bird">
 </p>
 
 ## In collaboration with:
