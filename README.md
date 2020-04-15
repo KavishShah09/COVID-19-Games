@@ -42,6 +42,14 @@ Flappy bird clone made using Vanilla JavaScript
  <img width=600px src="./public/images/flappyCorona.png" alt="Flappy Bird">
 </p>
 
+## CORONA MEME MEMORY!
+
+Guess the same pair of Memes to win!
+
+<p align="center">
+ <img width=600px src="./public/images/coronaMemeMemory.png" alt="Memory Game">
+</p>
+
 ## In collaboration with:
 
 - [Kavish Shah](https://github.com/KavishShah09)
