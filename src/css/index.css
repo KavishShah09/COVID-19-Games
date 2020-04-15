@@ -1,25 +1,25 @@
-body{
+body {
 	font-family: sans-serif;
-	margin:0px;
+	margin: 0px;
 	padding: 0px;
-	background-image: url(../photos/background3.jpg);
+	background-image: url(../../public/images/background3.jpg);
 }
-.clr{
+.clr {
 	clear: both;
 }
-.heading{
+.heading {
 	background-color: #191919;
 	margin-top: 0px;
-	padding-top:7px;
+	padding-top: 7px;
 	padding-bottom: 15px;
 	padding-left: 4px;
 }
-.header{
+.header {
 	margin-top: 7px;
 }
-.navbar-brand{
-	border:rgb(235, 11, 11) 7px solid;
-	padding:0 22px;
+.navbar-brand {
+	border: rgb(235, 11, 11) 7px solid;
+	padding: 0 22px;
 	border-bottom-right-radius: 50px;
 	border-top-left-radius: 50px;
 	margin-top: 40000px;
@@ -29,12 +29,12 @@ body{
 	text-decoration: none;
 	color: rgb(255, 255, 255);
 }
-.container{
+.container {
 	width: 70%;
 	padding: 40px;
 	position: absolute;
-	top:55%;
-	left:50%;
+	top: 55%;
+	left: 50%;
 	transform: translate(-50%, -50%);
 	background: #191919;
 	text-align: center;
@@ -42,28 +42,24 @@ body{
 	border-radius: 10%;
 	opacity: 93%;
 	margin-bottom: 40px;
-
 }
-.container h1{
+.container h1 {
 	background-color: #2ecc71;
-	width:80%;
-	margin:auto;
+	width: 80%;
+	margin: auto;
 	font-weight: 500px;
 	border-radius: 25%;
-	font-family: "montserrat";
+	font-family: 'montserrat';
 }
-.container ul{
-	
-}
-.container li{
+.container li {
 	list-style: none;
-	float:left;
-	width:33.3%;
-	box-sizing:border-box;
+	float: left;
+	width: 33.3%;
+	box-sizing: border-box;
 }
-.game{
+.game {
 	text-decoration: none;
-	border:0;
+	border: 0;
 	background: none;
 	display: block;
 	margin: 20px auto;
@@ -75,22 +71,17 @@ body{
 	color: rgba(255, 255, 255, 0.322);
 	border-radius: 24px;
 	padding: 10% 0;
-	font-size:140%;
+	font-size: 140%;
 	transition: 0.25s;
 }
-.game h{
-	width:
-}
-.game:hover{
+.game:hover {
 	width: 70%;
 	/*border-color: #ff0055;*/
 	border-color: #2ecc71;
 	color: rgb(255, 255, 255);
 	border-radius: 25%;
 }
-.game:active{
-}
-.game p{
+.game p {
 	color: rgba(255, 255, 255, 0.322);
 	margin: 0px;
 	font-weight: lighter;
@@ -98,5 +89,3 @@ body{
 	width: 100.34%;
 	margin: auto;
 }
-
-
