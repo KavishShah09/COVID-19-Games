@@ -1,0 +1,19 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1340px;
+  height: 532px;
+  align-items: center;
+}
+h3 {
+  text-align: center;
+  color: cyan;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+body {
+  align-content: center;
+  background-image: url(../../../public/images/coronaMemory/wallpaper.jpg);
+}
