@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
     var textOp = document.querySelector("textOutput");
     const optionOneId = cardsChosenId[0];
     const optionTwoId = cardsChosenId[1];
-    if (cardsChosen[0] === cardsChosen[1]) {
+    if (cardsChosen[0] === cardsChosen[1] && cardsChosenId[0]!=cardsChosenId[1]) {
       //alert("You found a match");
       //textOp.textContent = "You found a match";
 
