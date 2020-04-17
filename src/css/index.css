@@ -1,12 +1,10 @@
-body {
+/* body {
 	font-family: sans-serif;
 	margin: 0px;
 	padding: 0px;
 	background-image: url(../../public/images/background3.jpg);
 }
-.clr {
-	clear: both;
-}
+
 .heading {
 	background-color: #191919;
 	margin-top: 0px;
@@ -78,7 +76,7 @@ body {
 }
 .game:hover {
 	width: 70;
-	/*border-color: #ff0055;*/
+	/*border-color: #ff0055;
 	border-color: #2ecc71;
 	color: rgb(255, 255, 255);
 	border-radius: 25%;
@@ -91,3 +89,122 @@ body {
 	width: 100.34%;
 	margin: auto;
 }
+*/
+
+body {
+	font-family: sans-serif;
+	margin: 0px;
+	padding: 0px;
+	background-image: url(../../public/images/background3.jpg);
+}
+
+.heading {
+	background-color: #191919;
+	margin-top: 0px;
+	padding-top: 7px;
+	padding-bottom: 15px;
+	padding-left: 4px;
+	position: fixed; 
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+
+}
+.header {
+	margin-top: 7px;
+}
+.navbar-brand {
+	border: rgb(235, 11, 11) 7px solid;
+	padding: 0 22px;
+	border-bottom-right-radius: 50px;
+	border-top-left-radius: 50px;
+	margin-top: 40000px;
+	font-size: 200%;
+	font-style: italic;
+	background-color: #333;
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+}
+.flip-card {
+	
+	perspective: 1000px;
+	width: 30%;
+	height: 30%;
+    float: left;
+	margin-top: 3.33%; 
+	margin-bottom: 3.33%;  
+	margin-left: 1.66%;
+	margin-right: 1.66%; 
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.5s;
+	transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden; /* Safari */
+	backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+	background-color: #bbb;
+	color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+	background-color: #2ecc71;
+	color: white;
+	transform: rotateY(180deg);
+  }
+
+  .container {
+	width: 80%;
+	height: 100%;
+	position: relative;
+	background: #191919;
+	text-align: center;
+	border: #34495e solid 2px;
+	border-radius: 10%;
+	opacity: 93%;
+	margin-bottom: 40px;
+	padding: 3%;
+	margin: 5% auto;
+}
+
+#display{
+	color: white;
+	font-size: 40px;
+	padding: 5px;
+	background-color: #2ecc71;
+	border-radius: 15%;
+	width: 40%;
+	margin: 2% auto;
+	
+
+}
+.clickable {
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	position: absolute;     
+	z-index: 1;
+  }
+  
