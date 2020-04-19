@@ -1,98 +1,7 @@
-/* body {
-	font-family: sans-serif;
-	margin: 0px;
-	padding: 0px;
-	background-image: url(../../public/images/background3.jpg);
-}
 
-.heading {
-	background-color: #191919;
-	margin-top: 0px;
-	padding-top: 7px;
-	padding-bottom: 15px;
-	padding-left: 4px;
-	position: relative;
-
-}
-.header {
-	margin-top: 7px;
-}
-.navbar-brand {
-	border: rgb(235, 11, 11) 7px solid;
-	padding: 0 22px;
-	border-bottom-right-radius: 50px;
-	border-top-left-radius: 50px;
-	margin-top: 40000px;
-	font-size: 200%;
-	font-style: italic;
-	background-color: #333;
-	text-decoration: none;
-	color: rgb(255, 255, 255);
-}
-.container {
-	width: 80%;
-	padding: 40px;
-	position: absolute;
-	top: 65%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background: #191919;
-	text-align: center;
-	border: #34495e solid 2px;
-	border-radius: 10%;
-	opacity: 93%;
-	margin-bottom: 40px;
-}
-.container h1 {
-	background-color: #2ecc71;
-	width: 80%;
-	margin: auto;
-	font-weight: 500px;
-	border-radius: 25%;
-	font-family: 'montserrat';
-}
-.container li {
-	list-style: none;
-	float: left;
-	width: 33.3%;
-	box-sizing: border-box;
-}
-.game {
-	text-decoration: none;
-	border: 0;
-	background: none;
-	display: block;
-	margin: 20px auto;
-	text-align: center;
-	border: 2px solid #1cb8e7;
-	padding: 14px 10px;
-	width: 60%;
-	outline: none;
-	color: rgba(255, 255, 255, 0.322);
-	border-radius: 24px;
-	padding: 10% 0;
-	font-size: 140%;
-	transition: 0.25s;
-}
-.game:hover {
-	width: 70;
-	/*border-color: #ff0055;
-	border-color: #2ecc71;
-	color: rgb(255, 255, 255);
-	border-radius: 25%;
-}
-.game p {
-	color: rgba(255, 255, 255, 0.322);
-	margin: 0px;
-	font-weight: lighter;
-	font-size: 17px;
-	width: 100.34%;
-	margin: auto;
-}
-*/
 
 body {
-	font-family: sans-serif;
+	font-family: Oswald;
 	margin: 0px;
 	padding: 0px;
 	background-image: url(../../public/images/background3.jpg);
@@ -119,11 +28,12 @@ body {
 	border-top-left-radius: 50px;
 	margin-top: 40000px;
 	margin-right: 10px;
-	font-size: 200%;
+	font-size: 160%;
 	font-style: italic;
 	background-color: #333;
 	text-decoration: none;
 	color: rgb(255, 255, 255);
+	letter-spacing: 2px;
 }
 .flip-card {
 	
@@ -190,13 +100,13 @@ body {
 
 #display{
 	color: white;
-	font-size: 40px;
+	font-size: 4vw;
 	padding: 5px;
 	background-color: #2ecc71;
 	border-radius: 15%;
 	width: 40%;
 	margin: 2% auto;
-	
+	letter-spacing: 4px;
 
 }
 .clickable {
@@ -268,3 +178,14 @@ body {
 	line-height: 20px;
 }
 	
+.flip-card-back h1{
+	letter-spacing: 2px;
+	font-weight: 600;
+	font-size: 2.5vw;
+}
+.flip-card-back p{
+	font-weight: 200;
+	letter-spacing: 1px;
+	color: black;
+	font-size: 1.5vw;
+}
