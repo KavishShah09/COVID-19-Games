@@ -1,170 +1,111 @@
-<!-- <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" />
 		<link rel="shortcut icon" href="./public/images/favicon.png" type="image/x-icon" />
 		<link rel="stylesheet" href="./src/css/index.css" />
 		<title>JS Games</title>
 	</head>
 	<body>
 		<nav class="heading">
-			<div class="header">
+			<div class="header navElements">
 				<a class="navbar-brand" href="index.html">JS Games</a>
-				<button
-					class="navbar-toggler"
-					type="button"
-					data-toggle="collapse"
-					data-target="#navbarNav"
-					aria-controls="navbarNav"
-					aria-expanded="false"
-					aria-label="Toggle navigation"
-				></button>
+			</div>
+			<div class="dropdown navElements">
+				<button class="dropbtn">Contributors</button>
+				<div class="dropdown-content">
+					<a href="https://github.com/KavishShah09">Kavish Shah</a>
+					<a href="https://github.com/ishansaksena7">Ishan Saksena</a>
+					<a href="https://github.com/Adarsh1011">Adarsh Tiwari</a>
+					<a href="https://github.com/jash6">Jash Makhija</a>
+					<a href="https://github.com/AaryaDevnani">Aarya Devnani</a>
+					<a href="https://github.com/ArjunBalamwar">Arjun Balamwar</a>
+					<a href="https://github.com/gauravraj0510">Gaurav Raj</a>
+				</div>
 			</div>
 		</nav>
-			<div class="container">
-				<h1>PICK A GAME</h1>
-					<ul>
-						<li>
-							<a class ="game" href="./src/brickBreaker.html"><h3>Corona Breaker</h3><p>Help white blood cells to fight the corona virus</p></a>
-						</li>
-						<li>
-							<a class="game" href="./src/duckShooter.html"><h3>Corona Shooter</h3><p>Safety first! Get rid of corona virus completely using a sanitizer</p></a>
-						</li>
-						<li>
-							<a class="game" href="./src/beatBox.html"><h3>Beat Box</h3><p>Make various sick beats, hopefully not too sick</p></a>
-						</li>
-						<div class="clr"></div>
-						<li>
-							<a class="game" href="./src/flappyCorona.html"><h3>Flappy Corona</h3><p>Help corona virus from dodging sanitizer bottles</p></a>
-						</li>
-						<li>
-							<a class="game" href="./src/whackAVirus.html"><h3>Whack a Virus</h3><p>Spot the corona virus under a time limit</p></a>
-						</li>
-						<li>
-							<a class="game" href="./src/coronaMemory.html"><h3>Corona Memory</h3><p>Test your memory and have fun with memes</p></a>
-						</li>
-						<div class="clr"></div>
-					</ul>
-			    </div>
-			</div>		
+
+		<div class="container">
+			<div><h1 id="display">PICK A GAME</h1></div>
+
+			<div class="flip-card">
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<img src="public/images/coronaBreaker.png" alt="Avatar" style="width: 100%; height: 100%;" />
+					</div>
+					<div class="flip-card-back">
+						<a href="./src/brickBreaker.html"><span class="clickable"></span></a>
+						<h1>Corona Breaker</h1>
+						<p>Help white blood cells to fight the corona virus</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="flip-card">
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<img src="public/images/coronaShooter.png" alt="Avatar" style="width: 100%; height: 100%;" />
+					</div>
+					<div class="flip-card-back">
+						<a href="./src/duckShooter.html"><span class="clickable"></span></a>
+						<h1>Corona Shooter</h1>
+						<p>Safety first! Get rid of corona virus completely using a sanitizer</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="flip-card">
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<img src="public/images/beatBox.png" alt="Avatar" style="width: 100%; height: 100%;" />
+					</div>
+					<div class="flip-card-back">
+						<a href="./src/beatBox.html"><span class="clickable"></span></a>
+						<h1>Beat Box</h1>
+						<p>Make various sick beats, hopefully not too sick</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="flip-card">
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<img src="public/images/flappyCorona.png" alt="Avatar" style="width: 100%; height: 100%;" />
+					</div>
+					<div class="flip-card-back">
+						<a href="./src/flappyCorona.html"><span class="clickable"></span></a>
+						<h1>Flappy Corona</h1>
+						<p>Help corona virus from dodging sanitizer bottles</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="flip-card">
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<img src="public/images/whackAVirus.png" alt="Avatar" style="width: 100%; height: 100%;" />
+					</div>
+					<div class="flip-card-back">
+						<a href="./src/whackAVirus.html"><span class="clickable"></span></a>
+						<h1>Whack A Virus</h1>
+						<p>Spot the corona virus under a time limit</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="flip-card">
+				<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<img src="public/images/coronaMemeMemory.png" alt="Avatar" style="width: 100%; height: 100%;" />
+					</div>
+					<div class="flip-card-back">
+						<a href="./src/coronaMemory.html"><span class="clickable"></span></a>
+						<h1>Corona Meme Memory</h1>
+						<p>Test your memory and have fun with memes</p>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
-</html> -->
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-	<link rel="shortcut icon" href="./public/images/favicon.png" type="image/x-icon" />
-	<link rel="stylesheet" href="./src/css/index.css" />
-	<title>JS Games</title>
-</head>
-<body>
-	<nav class="heading">
-		<div class="header navElements">
-			<a class="navbar-brand" href="index.html">JS Games</a>
-		</div>
-		<div class="dropdown navElements">
-			<button class="dropbtn">Contributors</button>
-			<div class="dropdown-content">
-			  <a href="https://github.com/KavishShah09">Kavish Shah</a>
-			  <a href="https://github.com/ishansaksena7">Ishan Saksena</a>
-			  <a href="https://github.com/Adarsh1011">Adarsh Tiwari</a>
-			  <a href="https://github.com/jash6">Jash Makhija</a>
-			  <a href="https://github.com/AaryaDevnani">Aarya Devnani</a>
-			  <a href="https://github.com/ArjunBalamwar">Arjun Balamwar</a>
-			  <a href="https://github.com/gauravraj0510">Gaurav Raj</a>
-			</div>
-		</div>
-	</nav>
-
-	<div class="container">
-		<div><h1 id="display">PICK A GAME</h1></div>
-		
-		<div class="flip-card">
-			<div class="flip-card-inner">
-			  <div class="flip-card-front">
-				<img src="public/images/coronaBreaker.png" alt="Avatar" style="width:100%;height:100%;">
-			  </div>
-			  <div class="flip-card-back" >
-				<a href="./src/brickBreaker.html"><span class="clickable"></span></a>
-				<h1>Corona Breaker</h1>
-				<p>Help white blood cells to fight the corona virus</p>
-				
-			  </div>
-			</div>
-		</div>
-
-		  <div class="flip-card">
-			<div class="flip-card-inner">
-			  <div class="flip-card-front">
-				 <img src="public/images/coronaShooter.png" alt="Avatar" style="width:100%;height:100%;">
-			  </div>
-			  <div class="flip-card-back" >
-				<a href="./src/duckShooter.html"><span class="clickable"></span></a>
-				 <h1>Corona Shooter</h1>
-				 <p>Safety first! Get rid of corona virus completely using a sanitizer</p>
-			  </div>
-			</div>
-		  </div>
-
-		  <div class="flip-card">
-			<div class="flip-card-inner">
-			  <div class="flip-card-front">
-				<img src="public/images/beatBox.png" alt="Avatar" style="width:100%;height:100%;">
-			  </div>
-			  <div class="flip-card-back" >
-				<a href="./src/beatBox.html"><span class="clickable"></span></a>
-				<h1>Beat Box</h1>
-				<p>Make various sick beats, hopefully not too sick</p>
-				
-			  </div>
-			</div>
-		  </div>
-
-		  <div class="flip-card">
-			<div class="flip-card-inner">
-			  <div class="flip-card-front">
-				<img src="public/images/flappyCorona.png" alt="Avatar" style="width:100%;height:100%;">
-			  </div>
-			  <div class="flip-card-back" >
-				<a href="./src/flappyCorona.html"><span class="clickable"></span></a>
-				<h1>Flappy Corona</h1>
-				<p>Help corona virus from dodging sanitizer bottles</p>
-				
-			  </div>
-			</div>
-		  </div>
-
-		  <div class="flip-card">
-			<div class="flip-card-inner">
-			  <div class="flip-card-front">
-				<img src="public/images/whackAVirus.png" alt="Avatar" style="width:100%;height:100%;">
-			  </div>
-			  <div class="flip-card-back" >
-				<a href="./src/whackAVirus.html"><span class="clickable"></span></a>
-				<h1>Whack A Virus</h1>
-				<p>Spot the corona virus under a time limit</p>
-				
-			  </div>
-			</div>
-		  </div>
-
-		  <div class="flip-card">
-			<div class="flip-card-inner">
-			  <div class="flip-card-front">
-				<img src="public/images/coronaMemeMemory.png" alt="Avatar" style="width:100%;height:100%;">
-			  </div>
-			  <div class="flip-card-back">
-				<a href="./src/coronaMemory.html"><span class="clickable"></span></a>
-				<h1>Corona Meme Memory</h1>
-				<p>Test your memory and have fun with memes</p>
-				
-			  </div>
-			</div>
-		  </div>
-	</div>
-</body>
 </html>
