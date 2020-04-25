@@ -1,9 +1,53 @@
 body {
 	background-image: url(../../../public/images/background3.jpg);
 }
-#game {
-	margin: 40px auto;
+#myCanvas {
+	opacity: 0;
+	background: rgb(0, 0, 0);
+	padding-left: 0;
+	padding-right: 0;
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+.game {
+	margin: 10px auto;
 	padding: 0;
 	width: 800px;
-	height: 640px;
+	height: 500px;
+}
+h1,
+p {
+	padding: 15px 0px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	color: white;
+	background-color: black;
+	text-align: center;
+	width: 640px;
+}
+.startButton {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-bottom: 0;
+}
+.button {
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: Transparent;
+	background-repeat: no-repeat;
+	border: none;
+	cursor: pointer;
+	overflow: hidden;
+	outline: none;
+	font-size: xx-large;
+	font-family: 'Amatic SC', cursive;
+	font-weight: bolder;
+	color: white;
+	background-color: black;
 }

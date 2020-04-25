@@ -1,125 +1,160 @@
-var Breakout = new Phaser.Class({
-	Extends: Phaser.Scene,
+var canvas = document.getElementById('myCanvas');
+var ctx = canvas.getContext('2d');
+var ballRadius = 10;
+var x = canvas.width / 2;
+var y = canvas.height - 30;
+var dx = 2;
+var dy = -2;
+var paddleHeight = 10;
+var paddleWidth = 75;
+var paddleX = (canvas.width - paddleWidth) / 2;
+var rightPressed = false;
+var leftPressed = false;
+var brickRowCount = 7;
+var brickColumnCount = 5;
+var brickWidth = 75;
+var brickHeight = 20;
+var brickPadding = 10;
+var brickOffsetTop = 30;
+var brickOffsetLeft = 30;
+var score = 0;
+var lives = 3;
 
-	initialize: function Breakout() {
-		Phaser.Scene.call(this, { key: 'breakout' });
+const ball = new Image();
+ball.src = '../public/images/brickBreaker/ball.png';
 
-		this.bricks;
-		this.paddle;
-		this.ball;
-	},
+const paddle = new Image();
+paddle.src = '../public/images/brickBreaker/paddle.png';
 
-	preload: function () {
-		this.load.atlas(
-			'assets',
-			'../../../public/images/brickBreaker/brickBreaker.png',
-			'../../../public/images/brickBreaker/brickBreaker.json'
-		);
-	},
+const brick = new Image();
+brick.src = '../public/images/brickBreaker/brick.png';
 
-	create: function () {
-		//  Enable world bounds, but disable the floor
-		this.physics.world.setBoundsCollision(true, true, true, false);
+var bricks = [];
+for (var c = 0; c < brickColumnCount; c++) {
+	bricks[c] = [];
+	for (var r = 0; r < brickRowCount; r++) {
+		bricks[c][r] = { x: 0, y: 0, status: 1 };
+	}
+}
 
-		//  Create the bricks in a 10x6 grid
-		this.bricks = this.physics.add.staticGroup({
-			key: 'assets',
-			frame: ['blue1', 'red1', 'green1', 'yellow1', 'silver1', 'purple1'],
-			frameQuantity: 10,
-			gridAlign: { width: 10, height: 6, cellWidth: 64, cellHeight: 32, x: 112, y: 100 },
-		});
+document.addEventListener('keydown', keyDownHandler, false);
+document.addEventListener('keyup', keyUpHandler, false);
+document.addEventListener('mousemove', mouseMoveHandler, false);
 
-		this.ball = this.physics.add.image(400, 500, 'assets', 'ball1').setCollideWorldBounds(true).setBounce(1);
-		this.ball.setData('onPaddle', true);
+function keyDownHandler(e) {
+	if (e.key == 'Right' || e.key == 'ArrowRight') {
+		rightPressed = true;
+	} else if (e.key == 'Left' || e.key == 'ArrowLeft') {
+		leftPressed = true;
+	}
+}
 
-		this.paddle = this.physics.add.image(400, 550, 'assets', 'paddle1').setImmovable();
+function keyUpHandler(e) {
+	if (e.key == 'Right' || e.key == 'ArrowRight') {
+		rightPressed = false;
+	} else if (e.key == 'Left' || e.key == 'ArrowLeft') {
+		leftPressed = false;
+	}
+}
 
-		//  Our colliders
-		this.physics.add.collider(this.ball, this.bricks, this.hitBrick, null, this);
-		this.physics.add.collider(this.ball, this.paddle, this.hitPaddle, null, this);
-
-		//  Input events
-		this.input.on(
-			'pointermove',
-			function (pointer) {
-				//  Keep the paddle within the game
-				this.paddle.x = Phaser.Math.Clamp(pointer.x, 52, 748);
-
-				if (this.ball.getData('onPaddle')) {
-					this.ball.x = this.paddle.x;
+function mouseMoveHandler(e) {
+	var relativeX = e.clientX - canvas.offsetLeft;
+	if (relativeX > 0 && relativeX < canvas.width) {
+		paddleX = relativeX - paddleWidth / 2;
+	}
+}
+function collisionDetection() {
+	for (var c = 0; c < brickColumnCount; c++) {
+		for (var r = 0; r < brickRowCount; r++) {
+			var b = bricks[c][r];
+			if (b.status == 1) {
+				if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
+					dy = -dy;
+					b.status = 0;
+					score++;
+					if (score == brickRowCount * brickColumnCount) {
+						alert('YOU WIN, CONGRATS!');
+						document.location.reload();
+					}
 				}
-			},
-			this
-		);
-
-		this.input.on(
-			'pointerup',
-			function (pointer) {
-				if (this.ball.getData('onPaddle')) {
-					this.ball.setVelocity(-75, -300);
-					this.ball.setData('onPaddle', false);
-				}
-			},
-			this
-		);
-	},
-
-	hitBrick: function (ball, brick) {
-		brick.disableBody(true, true);
-
-		if (this.bricks.countActive() === 0) {
-			this.resetLevel();
+			}
 		}
-	},
+	}
+}
 
-	resetBall: function () {
-		this.ball.setVelocity(0);
-		this.ball.setPosition(this.paddle.x, 500);
-		this.ball.setData('onPaddle', true);
-	},
+function drawBall() {
+	ctx.drawImage(ball, x, y);
+}
+function drawPaddle() {
+	ctx.drawImage(paddle, paddleX, canvas.height - paddleHeight);
+}
+function drawBricks() {
+	for (var c = 0; c < brickColumnCount; c++) {
+		for (var r = 0; r < brickRowCount; r++) {
+			if (bricks[c][r].status == 1) {
+				var brickX = r * (brickWidth + brickPadding) + brickOffsetLeft;
+				var brickY = c * (brickHeight + brickPadding) + brickOffsetTop;
+				bricks[c][r].x = brickX;
+				bricks[c][r].y = brickY;
+				ctx.beginPath();
+				ctx.drawImage(brick, brickX, brickY);
+			}
+		}
+	}
+}
+function drawScore() {
+	ctx.font = '18px Serif';
+	ctx.fillStyle = '#a09e9f';
+	ctx.fillText('Score: ' + score, 8, 20);
+}
+function drawLives() {
+	ctx.font = '18px Serif';
+	ctx.fillStyle = '#a09e9f';
+	ctx.fillText('Lives: ' + lives, canvas.width - 65, 20);
+}
 
-	resetLevel: function () {
-		this.resetBall();
+function draw() {
+	canvas.style.opacity = 1;
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	drawBricks();
+	drawBall();
+	drawPaddle();
+	drawScore();
+	drawLives();
+	collisionDetection();
 
-		this.bricks.children.each(function (brick) {
-			brick.enableBody(false, 0, 0, true, true);
-		});
-	},
-
-	hitPaddle: function (ball, paddle) {
-		var diff = 0;
-
-		if (ball.x < paddle.x) {
-			//  Ball is on the left-hand side of the paddle
-			diff = paddle.x - ball.x;
-			ball.setVelocityX(-10 * diff);
-		} else if (ball.x > paddle.x) {
-			//  Ball is on the right-hand side of the paddle
-			diff = ball.x - paddle.x;
-			ball.setVelocityX(10 * diff);
+	if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+		dx = -dx;
+	}
+	if (y + dy < ballRadius) {
+		dy = -dy;
+	} else if (y + dy > canvas.height - ballRadius) {
+		if (x > paddleX && x < paddleX + paddleWidth) {
+			dy = -dy;
 		} else {
-			//  Ball is perfectly in the middle
-			//  Add a little random X to stop it bouncing straight up!
-			ball.setVelocityX(2 + Math.random() * 8);
+			lives--;
+			if (!lives) {
+				alert('GAME OVER');
+				document.location.reload();
+			} else {
+				x = canvas.width / 2;
+				y = canvas.height - 30;
+				dx = 3;
+				dy = -3;
+				paddleX = (canvas.width - paddleWidth) / 2;
+			}
 		}
-	},
+	}
 
-	update: function () {
-		if (this.ball.y > 600) {
-			this.resetBall();
-		}
-	},
-});
+	if (rightPressed && paddleX < canvas.width - paddleWidth) {
+		paddleX += 7;
+	} else if (leftPressed && paddleX > 0) {
+		paddleX -= 7;
+	}
 
-var config = {
-	type: Phaser.WEBGL,
-	width: 800,
-	height: 600,
-	parent: 'game',
-	scene: [Breakout],
-	physics: {
-		default: 'arcade',
-	},
-};
+	x += dx;
+	y += dy;
+	requestAnimationFrame(draw);
+}
 
-var game = new Phaser.Game(config);
+document.addEventListener('click', draw, false);

@@ -4,11 +4,21 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./css/brickBreaker/brickBreaker.css" />
-		<script src="//cdn.jsdelivr.net/npm/phaser@3.22.0/dist/phaser.min.js"></script>
 		<title>Breakout</title>
 	</head>
 	<body>
-		<div class="game" id="game"></div>
+		<div class="instruction">
+			<h1>Corona Breaker</h1>
+			<p>
+				USE THE MOUSE OR ARROW KEYS TO CONTROL THE PADDLE
+			</p>
+		</div>
+		<div class="startButton">
+			<button class="button" onClick="draw()">CLICK TO START</button>
+		</div>
+		<div class="game">
+			<canvas id="myCanvas" width="640" height="480"></canvas>
+		</div>
 		<script src="./js/brickBreaker/brickBreaker.js"></script>
 	</body>
 </html>

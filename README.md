@@ -4,7 +4,7 @@
 
 > ## CORONA BREAKER!
 
-A 2D breakout game made using phaser
+A 2D breakout game made using vanilla JavaScript
 
 <p align="center">
  <img width=600px src="./public/images/coronaBreaker.png" alt="Brick Breaker">
