@@ -1,6 +1,43 @@
 body {
 	background-image: url(../../../public/images/background3.jpg);
 }
+.navElements {
+float: left;
+}
+.heading {
+	background-color: #191919;
+	margin-top: 0px;
+	padding: 0;
+	margin: 0;
+	position: fixed; 
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+
+}
+.header {
+	margin-top: 7px;
+	
+	
+}
+.instruction{
+	margin-top: 40px;
+}
+
+.navbar-brand {
+	border: rgb(235, 11, 11) 7px solid;
+	padding: 0 22px;
+	border-bottom-right-radius: 50px;
+	border-top-left-radius: 50px;
+	margin-top: 40000px;
+	margin-right: 10px;
+	font-size: 160%;
+	font-style: italic;
+	background-color: #333;
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	letter-spacing: 2px;
+}
 #myCanvas {
 	opacity: 0;
 	background: rgb(0, 0, 0);

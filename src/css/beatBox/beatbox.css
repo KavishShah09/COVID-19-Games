@@ -1,6 +1,6 @@
 h1 {
 	color: white;
-	font-size: 85px;
+	font-size: 6.5vw;
 	font-family: Oswald;
 	letter-spacing: 6px;
 	text-align: center;
@@ -12,6 +12,39 @@ body {
 	background-image: url('../../../public/images/beatBox/black.jpg');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
+}
+.navElements {
+	float: left;
+}
+.heading {
+	background-color: #191919;
+	margin-top: 0px;
+	padding: 0;
+	margin: 0;
+	position: fixed; 
+	top: 0;
+	width: 100%;
+	z-index: 9999;
+
+}
+.header {
+	margin-top: 7px;
+	
+}
+
+.navbar-brand {
+	border: rgb(235, 11, 11) 7px solid;
+	padding: 0 22px;
+	border-bottom-right-radius: 50px;
+	border-top-left-radius: 50px;
+	margin-top: 40000px;
+	margin-right: 10px;
+	font-size: 160%;
+	font-style: italic;
+	background-color: #333;
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	letter-spacing: 2px;
 }
 
 .box {
@@ -206,7 +239,7 @@ canvas {
 	margin-bottom: 30px;
 	width: 40%;
 	color: white;
-	font-size: 25px;
+	font-size: 1.5vw;
 	font-family: Oswald;
 	text-align: center;
 }
