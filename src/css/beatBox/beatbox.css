@@ -25,6 +25,7 @@ body {
 	top: 0;
 	width: 100%;
 	z-index: 9999;
+	height: 40px;
 
 }
 .header {
